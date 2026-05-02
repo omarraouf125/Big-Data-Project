@@ -1,7 +1,7 @@
 import urllib.request
 import os
 
-dataset_dir = r"e:\CUFE\Spring 25\Big Data\Project\Dataset"
+dataset_dir = r"e:\CUFE\Spring_25\Big Data\Project\Dataset"
 base_url = "https://datasets.imdbws.com/"
 
 files = [

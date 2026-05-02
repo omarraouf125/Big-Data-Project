@@ -13,7 +13,7 @@ fix_code = [
     '\n'
 ]
 
-notebooks = glob.glob(r'e:\CUFE\Spring 25\Big Data\Project\notebooks\*.ipynb')
+notebooks = glob.glob(r'e:\CUFE\Spring_25\Big Data\Project\notebooks\*.ipynb')
 for nb_path in notebooks:
     with open(nb_path, 'r', encoding='utf-8') as f:
         nb = json.load(f)

@@ -12,7 +12,7 @@ HADOOP_LINES = [
     "\n"
 ]
 
-notebooks = sorted(glob.glob(r'e:\CUFE\Spring 25\Big Data\Project\notebooks\0*.ipynb'))
+notebooks = sorted(glob.glob(r'e:\CUFE\Spring_25\Big Data\Project\notebooks\0*.ipynb'))
 for nb_path in notebooks:
     if '01_' in nb_path:
         continue  # already fixed
