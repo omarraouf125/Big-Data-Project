@@ -1,6 +1,6 @@
 # Predictive Analytics for Enterprise Streaming Acquisitions
 
-**Course:** CMPS 451 — Data Mining, Big Data & Analytics (Spring 2026)  
+**Course:** CMPS 451 -- Data Mining, Big Data & Analytics (Spring 2026)  
 **Team:** 11
 
 ## Business Problem
@@ -51,11 +51,11 @@ python download_data.py
 
 ## Pipeline
 
-1. **Preprocessing** — PySpark loads 7 IMDb TSV files + user ratings, filters/cleans/joins
-2. **Feature Engineering** — Genre one-hot, director/cast track records, language features, user stats
-3. **Visualization** — 10 publication-quality plots incl. language bias & numVotes analysis
-4. **Modeling** — 4 regressors + 3 classifiers + K-Means clustering via Spark MLlib
-5. **Evaluation** — Full metrics on train/validation/test, confusion matrix, feature importance
+1. **Preprocessing** -- PySpark loads 7 IMDb TSV files + user ratings, filters/cleans/joins
+2. **Feature Engineering** -- Genre one-hot, director/cast track records, language features, user stats
+3. **Visualization** -- 10 publication-quality plots incl. language bias & numVotes analysis
+4. **Modeling** -- 4 regressors + 3 classifiers + K-Means clustering via Spark MLlib
+5. **Evaluation** -- Full metrics on train/validation/test, confusion matrix, feature importance
 
 ## Tech Stack
 
