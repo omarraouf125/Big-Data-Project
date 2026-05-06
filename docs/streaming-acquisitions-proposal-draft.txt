@@ -1,8 +1,23 @@
-pyspark
-pandas
-matplotlib
-seaborn
-scikit-learn
-numpy
-jupyter
-ipykernel
+Project Proposal: Predictive Analytics for Enterprise Streaming Acquisitions
+a. Idea
+The Problem Statement: Major streaming platforms and enterprise media networks face astronomical licensing costs when acquiring back-catalog movies and television series. Currently, content acquisition strategies often rely on historical prestige or gut feeling rather than predictable user engagement. The business problem we are addressing is: How can a streaming enterprise accurately predict the audience reception of a title before committing to a multimillion-dollar licensing agreement?
+
+The Proposed Value: By analyzing decades of highly relational movie and series metadata--including director track records, cast combinations, genres, and runtimes--we can predict a title's global audience rating. This predictive engine provides business users (Acquisition Managers and Content Strategists) with data-driven insights to maximize their Return on Investment (ROI). It allows platforms to pinpoint "hidden gems" that guarantee high audience satisfaction but have lower licensing costs, optimizing the platform's content budget.
+
+b. Dataset(s)
+To fulfill the requirement of utilizing a gigabyte-scale dataset, we will source our data directly from the Official IMDb Non-Commercial Datasets.
+
+Data Scale: The dataset consists of multiple highly relational, daily-updated TSV files (such as title.basics, title.ratings, title.principals, and name.basics). Combined, these files contain tens of millions of rows mapping millions of cast and crew members to individual titles, easily spanning several gigabytes when uncompressed.
+
+Link: https://developer.imdb.com/non-commercial-datasets/
+
+c. Planned Approach
+Framework & Environment: We will utilize Apache Spark integrated with Python (PySpark). Due to the massive size of the relational tables (specifically mapping millions of actors/directors to titles), traditional pandas processing is insufficient. The system will be initially implemented in pseudo-distributed mode (single-machine multiple processes) to handle the complex Big Data joins efficiently, with the potential to explore a fully distributed implementation as a bonus for the final delivery.
+
+Analytical Techniques:
+
+Data Preprocessing & Feature Engineering: We will use Spark SQL to handle missing values, perform optimized broadcast joins across the multi-gigabyte tables, and transform array columns (e.g., extracting comma-separated genres into distinct binary features).
+
+Prediction (Supervised Learning): We will train a Random Forest Regressor or Multiple Linear Regression (MLR) model using Spark MLlib. The model will ingest title metadata and crew history to predict the target variable: the title's exact averageRating.
+
+Segmentation (Unsupervised Learning): We will apply K-Means clustering to group historical titles into data-driven "micro-genres" based on metadata similarities, helping the business identify specific clusters of highly-rated, cost-effective content.
